@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemo1.MainPage"
+             xmlns:viewmodels="clr-namespace:MauiDemo1.ViewModels"
+             x:DataType="viewmodels:MainViewModel">
+    <Grid
+        ColumnDefinitions="*,*"
+        RowDefinitions="*,*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill"
+        BackgroundColor="Beige">
+        <Button
+            Text="Go To Page1"
+            Grid.Row="0"
+            Grid.Column="0"
+            Command="{Binding  NavigateToPage1Command}"
+            WidthRequest="100"
+            HeightRequest="50"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+        <Button
+            Text="Go To Page2"
+            Grid.Row="1"
+            Grid.Column="0"
+            Command="{Binding  NavigateToPage2Command}"
+            WidthRequest="100"
+            HeightRequest="50"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="{Binding Counter1}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"/>
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="{Binding Counter2}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"/>
+    </Grid>
+</ContentPage>
