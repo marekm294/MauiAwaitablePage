@@ -7,7 +7,7 @@ public partial class AwaitablePage2 : AwaitablePage<string>
 {
     public AwaitablePage2()
     {
-        BindingContext = new AwaitableViewModel1();
+        BindingContext = new AwaitableViewModel2();
         InitializeComponent();
     }
 }
