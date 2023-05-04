@@ -22,6 +22,7 @@
 		<Description>This nugget adds extension to await Content page for result.</Description>
 		<RepositoryUrl>https://github.com/marekm294/MauiAwaitablePage</RepositoryUrl>
 		<PackageTags>MAUI</PackageTags>
+		<PackageId>MauiAwaitablePage</PackageId>
 	</PropertyGroup>
 
 </Project>
