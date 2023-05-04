@@ -23,6 +23,8 @@
 		<RepositoryUrl>https://github.com/marekm294/MauiAwaitablePage</RepositoryUrl>
 		<PackageTags>MAUI</PackageTags>
 		<PackageId>M.AwaitablePage</PackageId>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 
 </Project>
