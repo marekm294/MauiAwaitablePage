@@ -9,7 +9,8 @@
         RowDefinitions="*,*"
         VerticalOptions="Fill"
         HorizontalOptions="Fill"
-        BackgroundColor="Beige">
+        BackgroundColor="Beige"
+        >
         <Button
             Text="Go To Page1"
             Grid.Row="0"
@@ -18,7 +19,8 @@
             WidthRequest="100"
             HeightRequest="50"
             VerticalOptions="Center"
-            HorizontalOptions="Center"/>
+            HorizontalOptions="Center"
+            />
         <Button
             Text="Go To Page2"
             Grid.Row="1"
@@ -27,7 +29,8 @@
             WidthRequest="100"
             HeightRequest="50"
             VerticalOptions="Center"
-            HorizontalOptions="Center"/>
+            HorizontalOptions="Center"
+            />
         <Label
             Grid.Row="0"
             Grid.Column="1"
@@ -35,7 +38,8 @@
             VerticalOptions="Center"
             HorizontalOptions="Center"
             HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"/>
+            VerticalTextAlignment="Center"
+            />
         <Label
             Grid.Row="1"
             Grid.Column="1"
@@ -43,6 +47,7 @@
             VerticalOptions="Center"
             HorizontalOptions="Center"
             HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"/>
+            VerticalTextAlignment="Center"
+            />
     </Grid>
 </ContentPage>

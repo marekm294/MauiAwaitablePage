@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:AwaitablePage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiDemo1.Pages.AwaitablePage2"
+    Title="AwaitablePage2"
+    x:TypeArguments="x:String"
+    xmlns:pages="clr-namespace:MauiAwaitablePage.Pages;assembly=MauiAwaitablePage"
+    xmlns:viewmodels="clr-namespace:MauiDemo1.ViewModels"
+    x:DataType="viewmodels:AwaitableViewModel2"
+    >
+    <Grid
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill"
+        >
+        <Button 
+            WidthRequest="150"
+            HeightRequest="150"
+            Text="Close page!"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Command="{Binding CloseCommand}"
+            />
+    </Grid>
+</pages:AwaitablePage>

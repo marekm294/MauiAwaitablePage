@@ -1,7 +1,9 @@
 ﻿namespace MauiDemo1.ViewModels;
 
 using CommunityToolkit.Maui.Alerts;
+using MauiAwaitablePage.Extensions;
 using MauiDemo1.Helpers;
+using MauiDemo1.Pages;
 using System.Windows.Input;
 
 internal sealed class MainViewModel : NotifyPropertyHelper
@@ -16,16 +18,20 @@ internal sealed class MainViewModel : NotifyPropertyHelper
 
     public MainViewModel()
     {
-        NavigateToPage1Command = new Command(() =>
+        NavigateToPage1Command = new Command(async () =>
         {
+            var navigation = App.Current.MainPage.Navigation;
+            var result = await navigation.PushAwaitableAsync(new AwaitablePage1());
             Counter1++;
-            Toast.Make("Page1").Show();
+            await Toast.Make($"Result from page 1 = {result}").Show();
         });
 
-        NavigateToPage2Command = new Command(() =>
+        NavigateToPage2Command = new Command(async () =>
         {
+            var navigation = App.Current.MainPage.Navigation;
+            var result = await navigation.PushAwaitableAsync(new AwaitablePage2());
             Counter2++;
-            Toast.Make("Page2").Show();
+            await Toast.Make($"Result from page 2 = {result}").Show();
         });
     }
 }
