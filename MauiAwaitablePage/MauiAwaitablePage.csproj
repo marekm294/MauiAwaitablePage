@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0;net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
@@ -22,7 +22,7 @@
 		<Description>This nugget adds extension to await Content page for result.</Description>
 		<RepositoryUrl>https://github.com/marekm294/MauiAwaitablePage</RepositoryUrl>
 		<PackageTags>MAUI</PackageTags>
-		<PackageId>MauiAwaitablePage</PackageId>
+		<PackageId>M.AwaitablePage</PackageId>
 	</PropertyGroup>
 
 </Project>
