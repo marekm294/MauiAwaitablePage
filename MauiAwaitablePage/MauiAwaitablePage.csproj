@@ -19,12 +19,13 @@
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<Title>Maui awaitable page</Title>
 		<Authors>marekm294</Authors>
-		<Description>This nugget adds extension to await Content page for result.</Description>
+		<Description>This nugget adds extension to await Content page for result.
+			You can find more on: https://github.com/marekm294/MauiAwaitablePage</Description>
 		<RepositoryUrl>https://github.com/marekm294/MauiAwaitablePage</RepositoryUrl>
 		<PackageTags>MAUI</PackageTags>
 		<PackageId>M.AwaitablePage</PackageId>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 	</PropertyGroup>
 
 </Project>

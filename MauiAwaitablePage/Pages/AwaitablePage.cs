@@ -2,6 +2,10 @@
 
 using MauiAwaitablePage.ViewModels;
 
+/// <summary>
+/// Represents an awaitable content page with a strongly typed return value.
+/// </summary>
+/// <typeparam name="T">The type of the return value.</typeparam>
 public class AwaitablePage<T> : ContentPage
 {
     private readonly WeakEventManager _pageClosedWeakEventManager = new();
