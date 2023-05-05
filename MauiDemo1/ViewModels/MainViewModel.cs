@@ -8,30 +8,33 @@ using System.Windows.Input;
 
 internal sealed class MainViewModel : NotifyPropertyHelper
 {
-    public ICommand NavigateToPage1Command { get; private set; }
+    public ICommand NavigateToCSharpPageCommand { get; private set; }
 
-    public ICommand NavigateToPage2Command { get; private set; }
+    public ICommand NavigateToXamlPageCommand { get; private set; }
 
-    public int Counter1 { get; set; }
-
-    public int Counter2 { get; set; }
+    public ICommand NavigateToNonGenericPageCommand { get; private set; }
 
     public MainViewModel()
     {
-        NavigateToPage1Command = new Command(async () =>
+        NavigateToCSharpPageCommand = new Command(async () =>
         {
             var navigation = App.Current.MainPage.Navigation;
-            var result = await navigation.PushAwaitableAsync(new AwaitablePage1());
-            Counter1++;
-            await Toast.Make($"Result from page 1 = {result}").Show();
+            var result = await navigation.PushAwaitableAsync(new CSharpAwaitablePage());
+            await Toast.Make($"Result from C# page = {result}").Show();
         });
 
-        NavigateToPage2Command = new Command(async () =>
+        NavigateToXamlPageCommand = new Command(async () =>
         {
             var navigation = App.Current.MainPage.Navigation;
-            var result = await navigation.PushAwaitableAsync(new AwaitablePage2());
-            Counter2++;
-            await Toast.Make($"Result from page 2 = {result}").Show();
+            var result = await navigation.PushAwaitableAsync(new XamlAwaitablePage());
+            await Toast.Make($"Result from Xaml page = {result}").Show();
+        });
+
+        NavigateToNonGenericPageCommand = new Command(async () =>
+        {
+            var navigation = App.Current.MainPage.Navigation;
+            await navigation.PushAwaitableAsync(new NonGenericAwailablePage());
+            await Toast.Make($"No result from page").Show();
         });
     }
 }

@@ -3,13 +3,13 @@
 using MauiAwaitablePage.ViewModels;
 using System.Windows.Input;
 
-internal sealed class AwaitableViewModel2 : IAwaitableViewModel<string>
+internal sealed class XamlAwaitableViewModel : IAwaitableViewModel<string>
 {
     public ICommand CloseCommand { get; private set; }
 
     public string ReturnValue { get; private set; }
 
-    public AwaitableViewModel2()
+    public XamlAwaitableViewModel()
     {
         CloseCommand = new Command(async () =>
         {

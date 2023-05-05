@@ -5,11 +5,11 @@ using MauiAwaitablePage.Pages;
 using MauiDemo1.ViewModels;
 using Microsoft.Maui.Controls;
 
-internal sealed class AwaitablePage1 : AwaitablePage<int>
+internal sealed class CSharpAwaitablePage : AwaitablePage<int>
 {
-    public AwaitablePage1()
+    public CSharpAwaitablePage()
     {
-        BindingContext = new AwaitableViewModel1();
+        BindingContext = new CSharpAwaitableViewModel();
         Content = InitializeContent();
     }
 
@@ -22,7 +22,7 @@ internal sealed class AwaitablePage1 : AwaitablePage<int>
                 new Button()
                     .Size(150)
                     .Text("Close page!")
-                    .Bind(Button.CommandProperty, nameof(AwaitableViewModel1.CloseCommand))
+                    .Bind(Button.CommandProperty, nameof(CSharpAwaitableViewModel.CloseCommand))
                     .Center(),
             }
         }

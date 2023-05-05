@@ -26,9 +26,25 @@ public static class NavigationExtensions
         }
 
         page.PageClosed += PageClosed;
-
         await navigation.PushAsync(page, isAnimated);
 
         return await result.Task;
+    }
+
+    public static async Task PushAwaitableAsync(
+        this INavigation navigation,
+        AwaitablePage page,
+        bool isAnimated = true)
+    {
+        var result = new TaskCompletionSource();
+        void PageClosed(object? _, object __)
+        {
+            page.PageClosed -= PageClosed;
+            result?.SetResult();
+        }
+
+        page.PageClosed += PageClosed;
+        await navigation.PushAsync(page, isAnimated);
+        await result.Task;
     }
 }

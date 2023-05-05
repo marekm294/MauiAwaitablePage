@@ -6,48 +6,40 @@
              x:DataType="viewmodels:MainViewModel">
     <Grid
         ColumnDefinitions="*,*"
-        RowDefinitions="*,*"
+        RowDefinitions="*,*,*"
         VerticalOptions="Fill"
         HorizontalOptions="Fill"
         BackgroundColor="Beige"
         >
         <Button
-            Text="Go To Page1"
+            Text="Go To C# Page"
             Grid.Row="0"
             Grid.Column="0"
-            Command="{Binding  NavigateToPage1Command}"
+            Command="{Binding  NavigateToCSharpPageCommand}"
             WidthRequest="100"
             HeightRequest="50"
             VerticalOptions="Center"
             HorizontalOptions="Center"
             />
         <Button
-            Text="Go To Page2"
+            Text="Go To Xaml Page"
             Grid.Row="1"
             Grid.Column="0"
-            Command="{Binding  NavigateToPage2Command}"
+            Command="{Binding  NavigateToXamlPageCommand}"
             WidthRequest="100"
             HeightRequest="50"
             VerticalOptions="Center"
             HorizontalOptions="Center"
             />
-        <Label
-            Grid.Row="0"
-            Grid.Column="1"
-            Text="{Binding Counter1}"
+        <Button
+            Text="Go To Non-Generic Page"
+            Grid.Row="2"
+            Grid.Column="0"
+            Command="{Binding  NavigateToNonGenericPageCommand}"
+            WidthRequest="100"
+            HeightRequest="50"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"
-            />
-        <Label
-            Grid.Row="1"
-            Grid.Column="1"
-            Text="{Binding Counter2}"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"
             />
     </Grid>
 </ContentPage>

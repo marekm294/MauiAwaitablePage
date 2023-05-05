@@ -60,7 +60,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\AwaitablePage2.xaml">
+	  <Compile Update="Pages\XamlAwaitablePage.xaml.cs">
+	    <DependentUpon>XamlAwaitablePage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\XamlAwaitablePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

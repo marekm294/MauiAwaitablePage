@@ -2,12 +2,11 @@
 <pages:AwaitablePage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="MauiDemo1.Pages.AwaitablePage2"
-    Title="AwaitablePage2"
+    x:Class="MauiDemo1.Pages.XamlAwaitablePage"
     x:TypeArguments="x:String"
     xmlns:pages="clr-namespace:MauiAwaitablePage.Pages;assembly=MauiAwaitablePage"
     xmlns:viewmodels="clr-namespace:MauiDemo1.ViewModels"
-    x:DataType="viewmodels:AwaitableViewModel2"
+    x:DataType="viewmodels:XamlAwaitableViewModel"
     >
     <Grid
         VerticalOptions="Fill"
