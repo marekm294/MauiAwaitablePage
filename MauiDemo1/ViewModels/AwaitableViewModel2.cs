@@ -14,7 +14,7 @@ internal sealed class AwaitableViewModel2 : IAwaitableViewModel<string>
         CloseCommand = new Command(async () =>
         {
             var navigation = App.Current.MainPage.Navigation;
-            ReturnValue = "ZAVRENOOOOOOO!";
+            ReturnValue = "Page was closed!";
             await navigation.PopAsync();
         });
     }
