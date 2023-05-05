@@ -1,5 +1,8 @@
 ﻿namespace MauiAwaitablePage.Pages;
 
+/// <summary>
+/// Represents an awaitable content page with no return value.
+/// </summary>
 public class AwaitablePage : BaseAwaitablePage
 {
     internal event EventHandler PageClosed
