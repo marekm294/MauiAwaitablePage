@@ -10,7 +10,7 @@ Download nuget from https://www.nuget.org/packages/M.AwaitablePage or find it in
   <b>Usage:</b><br>
 Create Page class which inherits from AwaitablePage<T> where T is your desired return type. Create your ViewModel which implement IViewModel interface. Set your ViewModel as your page's BindingContext. Use PushAwaitableAsync<T> extension method and await.
 
-  <b>Create page C#</b><br>
+  <b>Create page C#</b>
 ```C#
 namespace Demo.Pages;
 
@@ -45,8 +45,7 @@ internal sealed class MySuperCoolAwaitablePage : AwaitablePage<string>
 }
 ```
 <br>
-  <b>Create page XAML</b><br>  
-  
+  <b>Create page XAML</b>
 ```XAML 
 <?xml version="1.0" encoding="utf-8" ?>
 <pages:AwaitablePage
@@ -74,7 +73,6 @@ internal sealed class MySuperCoolAwaitablePage : AwaitablePage<string>
     </Grid>
 </pages:AwaitablePage>
 ```
-  
 ```C#
 namespace Demo.Pages;
 
@@ -92,7 +90,7 @@ public partial class MySuperCoolAwaitablePage : AwaitablePage<string>
 ```
 <br>
 
-  <b>Create ViewModel</b><br>
+  <b>Create ViewModel</b>
 ```C#
 namespace Demo.ViewModels;
 
@@ -116,4 +114,5 @@ internal sealed class MySuperCoolAwaitableViewModel : IAwaitableViewModel<string
     }
 }
 ```
+<br>
 That's all you need.
