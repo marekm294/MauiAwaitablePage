@@ -46,6 +46,7 @@ internal sealed class MySuperCoolAwaitablePage : AwaitablePage<string>
 ```
 <br>
   <b>Create page XAML</b>
+  
 ```XAML 
 <?xml version="1.0" encoding="utf-8" ?>
 <pages:AwaitablePage
