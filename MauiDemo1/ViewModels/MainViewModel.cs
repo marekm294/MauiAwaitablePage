@@ -14,6 +14,8 @@ internal sealed class MainViewModel : NotifyPropertyHelper
 
     public ICommand NavigateToNonGenericPageCommand { get; private set; }
 
+    public ICommand NavigateToNonGenericModalPageCommand { get; private set; }
+
     public MainViewModel()
     {
         NavigateToCSharpPageCommand = new Command(async () =>
@@ -35,6 +37,13 @@ internal sealed class MainViewModel : NotifyPropertyHelper
             var navigation = App.Current.MainPage.Navigation;
             await navigation.PushAwaitableAsync(new NonGenericAwailablePage());
             await Toast.Make($"No result from page").Show();
+        });
+
+        NavigateToNonGenericModalPageCommand = new Command(async () =>
+        {
+            var navigation = App.Current.MainPage.Navigation;
+            await navigation.PushAwaitableModalAsync(new NonGenericAwailableModalPage());
+            await Toast.Make($"No result from modal page").Show();
         });
     }
 }

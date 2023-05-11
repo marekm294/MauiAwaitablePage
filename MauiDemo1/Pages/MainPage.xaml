@@ -41,5 +41,15 @@
             VerticalOptions="Center"
             HorizontalOptions="Center"
             />
+        <Button
+            Text="Go To Non-Generic Modal Page"
+            Grid.Row="0"
+            Grid.Column="1"
+            Command="{Binding  NavigateToNonGenericModalPageCommand}"
+            WidthRequest="100"
+            HeightRequest="50"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
     </Grid>
 </ContentPage>

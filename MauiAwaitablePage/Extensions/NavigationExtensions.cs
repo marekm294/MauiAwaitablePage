@@ -54,4 +54,55 @@ public static class NavigationExtensions
         await navigation.PushAsync(page, isAnimated);
         await result.Task;
     }
+
+    /// <summary>
+    /// This method allows you to present a page modally and await its completion before continuing execution. It returns a <see cref="Task{T}"/> object that represents the asynchronous operation and completes when the presented page is closed.
+    /// </summary>
+    /// <typeparam name="T">The type of the page result.</typeparam>
+    /// <param name="navigation">The INavigation instance on which the page will be presented modally.</param>
+    /// <param name="page">The AwaitablePage that will be presented modally.</param>
+    /// <param name="isAnimated">Whether or not the transition to the presented page should be animated.</param>
+    /// <returns>A Task{T} object that represents the asynchronous operation and completes 
+    public static async Task<T?> PushAwaitableModalAsync<T>(
+        this INavigation navigation,
+        AwaitablePage<T> page,
+        bool isAnimated = true)
+    {
+        var result = new TaskCompletionSource<T?>();
+
+        void PageClosed(object? _, T? args)
+        {
+            page.PageClosed -= PageClosed;
+            result?.SetResult(args);
+        }
+
+        page.PageClosed += PageClosed;
+        await navigation.PushModalAsync(page, isAnimated);
+
+        return await result.Task;
+    }
+
+    /// <summary>
+    /// This method allows you to present a page modally and await its completion before continuing execution.
+    /// </summary>
+    /// <param name="navigation">The INavigation instance on which the page will be pushed.</param>
+    /// <param name="page">The AwaitablePage that will be pushed onto the navigation stack.</param>
+    /// <param name="isAnimated">Whether or not the transition to the pushed page should be animated.</param>
+    /// <returns>A Task that represents the asynchronous operation and completes when the pushed page is closed.</returns>
+    public static async Task PushAwaitableModalAsync(
+        this INavigation navigation,
+        AwaitablePage page,
+        bool isAnimated = true)
+    {
+        var result = new TaskCompletionSource();
+        void PageClosed(object? _, object __)
+        {
+            page.PageClosed -= PageClosed;
+            result?.SetResult();
+        }
+
+        page.PageClosed += PageClosed;
+        await navigation.PushModalAsync(page, isAnimated);
+        await result.Task;
+    }
 }
