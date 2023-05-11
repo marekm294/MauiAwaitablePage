@@ -24,8 +24,9 @@
 		<PackageTags>MAUI</PackageTags>
 		<PackageId>M.AwaitablePage</PackageId>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.0.3</Version>
+		<Version>1.0.5</Version>
 		<UserSecretsId>66148445-4bba-40a4-ab79-40de66a6db64</UserSecretsId>
+		<PackageReleaseNotes>Added support for PushModalAsync.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
